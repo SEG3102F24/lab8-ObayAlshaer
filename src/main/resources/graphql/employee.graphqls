@@ -1,1 +1,31 @@
+type Employee {
+    id: ID!
+    name: String!
+    dateOfBirth: String
+    city: String
+    salary: Float
+    gender: String
+    email: String
+}
+
+# Queries for fetching employee data
+type Query {
+
+    getAllEmployees: [Employee]
+    # Fetch an employee by ID
+    getEmployeeById(id: ID!): Employee
+}
+
+# Mutations for modifying employee data
+type Mutation {
+    # Add a new employee
+    addEmployee(
+        name: String!
+        dateOfBirth: String
+        city: String
+        salary: Float
+        gender: String
+        email: String
+    ): Employee
+}
 
